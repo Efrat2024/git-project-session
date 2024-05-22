@@ -20,7 +20,10 @@ const getVacationById = async (req, res) => {
     res.json(vacation)
 }
 const createNewVacation = async (req, res) => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     // const image=(req.files?.filename? req.file.filename:"")
     let images = []
     req.files.forEach(element => {
@@ -53,6 +56,13 @@ const createNewVacation = async (req, res) => {
     const vacation_check = await Vacation.find({ name }).lean()
     if (vacation_check?.length)
         return res.status(400).json({ message: 'There is the same vacationname' })
+<<<<<<< HEAD
+=======
+    // if(endDate.startDate)
+    // {
+    //     return res.status(400).json({message:'the date are not good!'})
+    // }
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     const vacation = await Vacation.create({ name, startDate, endDate, active, price, location, registeredVactioners, images })
     if (vacation) {
         return res.status(201).json({ message: "new vacation created" })
@@ -62,6 +72,23 @@ const createNewVacation = async (req, res) => {
     }
 
 }
+<<<<<<< HEAD
+=======
+// const updateaddImages=async (req,res)=>{
+//     const imgUrl=req.file?.path
+//    const imgArr=req.file
+//    const vacation = await Vacation.create({name,startDate,endDate,price,location,images:[...images,imgArr]})
+//  vacation.images=vacation.images.push(image)
+//    await vacation.save()
+//    if(vacation){ 
+//        return res.status(201).json({message:"we addd more images"})
+//        }
+//    else{
+//        return res.status(400).json({message:"no vacation found"})
+//    }
+
+// }
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 const deleteVacation = async (req, res) => {
 
     const { _id } = req.body

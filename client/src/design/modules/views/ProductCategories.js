@@ -3,10 +3,19 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
+<<<<<<< HEAD
 import Typography from '../../css/components-of-css-temlate/Typography';
 import { useState } from 'react';
 import useAxios from 'axios-hooks'
 import { useEffect } from 'react';
+=======
+import Typography from '../components/Typography';
+import { useState } from 'react';
+import Axios from 'axios';
+import useAxios from 'axios-hooks'
+import { useEffect } from 'react';
+import { Button } from '@mui/material';
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 import {useGetVacationsQuery} from '../../../Store/Slices/vacationApiSlice'
 import { useNavigate } from 'react-router-dom';
 
@@ -59,6 +68,7 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
   },
 }));
 
+<<<<<<< HEAD
 
 
 
@@ -69,6 +79,41 @@ export default function ProductCategories() {
   const navigate = useNavigate()
   console.log(localStorage.getItem("token"));
   const [{ data, loading, error }, refetch] = useAxios(
+=======
+// const getImages = async () => {
+//   console.log("ooooooooooooooooo");
+//   const { data } = useGetVacationsQuery();
+//   const res = await Axios({
+//     // Endpoint to send files
+//     url: "http://localhost:4444/api/vacation/1",
+//     method: "PUT",
+//     headers: {
+//       // Add any auth token here
+//       authorization: "Bearer " + localStorage.getItem("token"),
+//     },
+//     // Attaching the form data
+//   })
+//   .then((res) => {
+//    for (let index = 0; index <images.length; index++) {
+//       console.log("uytrree  iiii",index,"   ",res.data.data.arr9[index]);
+//      const element={url:res.data.data.arr9[index].image,title:res.data.data.arr9[index].name,width:images[index].width,}
+//       images[index]=element
+//       console.log("ppp",images[index]);
+//    }
+//   })
+//   .catch((err) => console.log("1111111111111111111111א   " + err))
+
+// }
+
+
+export default function ProductCategories() {
+  const [thereAeeVacations, setThereAteVacations] = useState()
+  const { data } = useGetVacationsQuery();
+  console.log("dataaaaaaaaaaaaaa",data)
+  const navigate = useNavigate()
+
+  const [{ dataArr9, loading, error }, refetch] = useAxios(
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     {
       url: 'http://localhost:4444/api/vacation',
       headers: {
@@ -79,10 +124,19 @@ export default function ProductCategories() {
     }
   )
   
+<<<<<<< HEAD
   useEffect(() => { console.log('dataCategories', data) }, [data])
   useEffect(() => { console.log('errorCategories', error) }, [error])
   useEffect(() => { console.log('loadingCategories', loading) }, [loading])
   const func2=(e)=>{
+=======
+  useEffect(() => { console.log('dataCategories', dataArr9) }, [dataArr9])
+  useEffect(() => { console.log('errorCategories', error) }, [error])
+  useEffect(() => { console.log('loadingCategories', loading) }, [loading])
+  const func2=(e)=>{
+    console.log("im in func2");
+    console.log("eeeeeee:::",e);
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     if(e!="nullo"){
       
      navigate(`/info?e=${e}`);

@@ -1,4 +1,5 @@
 import * as React from 'react';
+<<<<<<< HEAD
 import Button from '../../css/components-of-css-temlate/Button';
 import Typography from '../../css/components-of-css-temlate/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
@@ -8,6 +9,22 @@ import img2 from '../../../images/ladder-home-reflection-blue-beautiful copy.jpg
 import img3 from '../../../images/beautiful.jpg'
 import { Galleria } from 'primereact/galleria';
 import '../../css/Homepage.css'
+=======
+import Button from '../components/Button';
+import Typography from '../components/Typography';
+import ProductHeroLayout from './ProductHeroLayout';
+import SignIn from '../../SignIn';
+import SignUp from '../../SignUp';
+import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
+import img1 from './images/beautiful-seaside-landscape.jpg'
+import img2 from './images/ladder-home-reflection-blue-beautiful copy.jpg'
+import img3 from './images/beautiful.jpg'
+import AppFooter from './AppFooter';
+import  { useState, useEffect } from 'react';
+import { Galleria } from 'primereact/galleria';
+import './Homepage.css'
+// import { PhotoService } from './service/PhotoService';
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 
 
 

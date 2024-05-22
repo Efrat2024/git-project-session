@@ -1,4 +1,5 @@
 import * as React from 'react';
+<<<<<<< HEAD
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
@@ -8,6 +9,21 @@ import img01 from '../../../images/productHowItWorks1.svg'
 import img02 from '../../../images/productHowItWorks2.svg'
 import img03 from '../../../images/productHowItWorks3.svg'
 import imgLine from '../../../images/productCurvyLines.png'
+=======
+
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import Button from '../components/Button';
+import Typography from '../components/Typography';
+import img01 from './images/productHowItWorks1.svg'
+import img02 from './images/productHowItWorks2.svg'
+import img03 from './images/productHowItWorks3.svg'
+import imgLine from '../../../images/productCurvyLines.png'
+const m=img01
+const m1=img02
+const m2=img03
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 const item = {
   display: 'flex',
   flexDirection: 'column',
@@ -112,7 +128,11 @@ function ProductHowItWorks() {
           size="large"
           variant="contained"
           component="a"
+<<<<<<< HEAD
           href="/signUp"
+=======
+          href="/premium-themes/onepirate/sign-up/"
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
           sx={{ mt: 8 }}
           style={{color:'#ffffff',backgroundColor:'#ff3366'}}
         >

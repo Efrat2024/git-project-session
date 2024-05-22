@@ -60,6 +60,10 @@ const getAllUser = async (req, res) => {
     if (!user) {
         return res.status(400).json({ message: "no user found" })
     }
+<<<<<<< HEAD
+=======
+    //  console.log("fffffffffffffffffff");
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     res.json(user)
 
 
@@ -74,7 +78,41 @@ const getUserById = async (req, res) => {
     res.json(user)
 
 }
+<<<<<<< HEAD
 
+=======
+// const createNewUser=async (req,res)=>{
+
+//     const {password,firstname,lastname,email,roles,vacationPackage,shoppingCart,pay}=req.body
+//     if(!email || !password||!firstname||!lastname){
+//         return res.status(400).json({message:'Fields is required'})
+//     }
+//     const user_check= await User.find({email}).lean()
+//     if(user_check?.length)
+//         return res.status(400).json({message:'There is the same username'})
+//     if(roles)
+//         if(roles!="User" &roles!="Manager"){
+//             return res.status(400).json({message:'Invalid roles'})
+//         }
+
+//     const user = await User.create({password,firstname,lastname,email,roles,vacationPackage,shoppingCart,pay})
+//     if(password===process.env.ManagerPassword)
+//     {
+//           console.log("yes!! the manager here!!!!");
+//         user.roles='Manager';
+//     }
+//     if(user.roles=='User'){ 
+//         return res.status(201).json({message:"new user created"})
+//         }
+//     else   if(user.roles=='Manager'){ 
+//         return res.status(201).json({message:"new Manager created"})
+//         }
+//     {
+//         return res.status(400).json({message:"no user found"})
+//     }
+
+// }
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 const deleteUser = async (req, res) => {
 
     const { _id } = req.body
@@ -87,6 +125,7 @@ const deleteUser = async (req, res) => {
     const reply = `Username ${result.firstname} ID ${result._id} deleted`
     res.json(reply)
 }
+<<<<<<< HEAD
 
 const AddQuestionToTamar = async (req, res) => {
      const { text,email } = req.body
@@ -98,6 +137,8 @@ sendEmailToTamar(from,body)
         // console.log(Tamar);
 
 }
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 const updateUser = async (req, res) => {//*
     const { _id, firstname, lastname, email, roles, pay } = req.body
     if (!_id) {
@@ -168,7 +209,11 @@ const addToShoppingCart = async (req, res) => {
         return res.status(500).json('Error adding item to shopping cart');
     }
 };
+<<<<<<< HEAD
 const addToMyvacationPackage = async (req, res) => {
+=======
+const addTovacationPackage = async (req, res) => {
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     const { userId } = req.body;
     try {
         const user = await User.findById(userId).populate('shoppingCart');
@@ -199,6 +244,10 @@ const addToMyvacationPackage = async (req, res) => {
         }
 
         await user.save();
+<<<<<<< HEAD
+=======
+        console.log("email.............",user.email);
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         sendEmailToUserf(user.email,"your password is: "+user.password)
         return res.json('Items added to vacation package successfully');
     } catch (error) {
@@ -207,10 +256,19 @@ const addToMyvacationPackage = async (req, res) => {
     }
 };
 
+<<<<<<< HEAD
 function sendEmailToUserf(to, body) {
     mailer.sendEmail(to, body)
         .then(info => {
             console.log('Email sent to user: ', info.response);
+=======
+
+
+function sendEmailToUserf(to, body) {
+    mailer.sendEmail(to, body)
+        .then(info => {
+            console.log('Email sent: ', info.response);
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         })
         .catch(error => {
             console.log('Error sending email: ', error);
@@ -220,12 +278,20 @@ function sendEmailToUserf(to, body) {
 function sendEmailToTamar(from, body) {
     mailerTmar.sendEmail(from, body)
         .then(info => {
+<<<<<<< HEAD
             console.log('Email sent to tamar: ', info.response);
+=======
+            console.log('Email sent: ', info.response);
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         })
         .catch(error => {
             console.log('Error sending email: ', error);
         });
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 
 
 const deleteFromShoppingCart = async (req, res) => {
@@ -295,7 +361,10 @@ const deleteFromvacationPackaget = async (req, res) => {
 };
 const keepMeUpdate = async (req, res) => {
     const { _id, email } = req.body
+<<<<<<< HEAD
     console.log("email",email);
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     if (!_id) {
         return res.status(400).json({ message: " _id  not found keep" })
     }
@@ -304,7 +373,11 @@ const keepMeUpdate = async (req, res) => {
         return res.status(400).json('no user like that keep')
     }
     user.isRegister=true
+<<<<<<< HEAD
     // user.email = email
+=======
+    user.email = email
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     const updatedUser = await user.save()
     body=" 👍תודה שנרשמת לתמר נופשים! אנחנו נעדכן אותך, ונשלח לך הודעה למייל בכל נופש חדש שנפתח..... "
     sendEmailToUserf(user.email,body )
@@ -329,21 +402,33 @@ const allRegisters =  async(req,res) => {
      });
      res.json(registerUser)
 
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 const sendEmailTamar =  async(req,res) => {
   const   {from,body}=req.body
     console.log("sendEmailTamar");
     sendEmailToTamar(from, body)
+<<<<<<< HEAD
 };
 
 const a =  async(req,res) => {
    
       console.log("a");
   };
+=======
+}
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 
 
 
 
 
 
+<<<<<<< HEAD
 module.exports = { sendEmailTamar,allRegisters,keepMeUpdate, AddQuestionToTamar,getAllUser, getUserById, deleteUser, globaldeleteShopingcart, globaldeletevacationPackaget, updateUser, addToShoppingCart, addToMyvacationPackage, deleteFromShoppingCart, deleteFromvacationPackaget }
+=======
+module.exports = { sendEmailTamar,allRegisters,keepMeUpdate, getAllUser, getUserById, deleteUser, globaldeleteShopingcart, globaldeletevacationPackaget, updateUser, addToShoppingCart, addTovacationPackage, deleteFromShoppingCart, deleteFromvacationPackaget }
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278

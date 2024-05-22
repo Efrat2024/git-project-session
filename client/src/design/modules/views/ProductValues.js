@@ -3,10 +3,17 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
+<<<<<<< HEAD
 import Typography from '../../css/components-of-css-temlate/Typography';
 import img3 from '../../../images/productValues2.svg'
 import img4 from '../../../images/productValues3.svg'
 import img5 from '../../../images/productValues1.svg'
+=======
+import Typography from '../components/Typography';
+import img3 from './images/productValues2.svg'
+import img4 from './images/productValues3.svg'
+import img5 from './images/productValues1.svg'
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 import imgLine from '../../../images/productCurvyLines.png'
 const x=img3
 const y=img4

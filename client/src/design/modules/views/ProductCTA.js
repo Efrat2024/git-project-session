@@ -2,10 +2,19 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
+<<<<<<< HEAD
 import Typography from '../../css/components-of-css-temlate/Typography';
 import TextField from './TextField';
 import Snackbar from './Snackbar';
 import Button from '../../css/components-of-css-temlate/Button';
+=======
+import Typography from '../components/Typography';
+import TextField from '../components/TextField';
+import Snackbar from '../components/Snackbar';
+import Button from '../components/Button';
+import AppFooter from './AppFooter';
+import x from '../../../images/productCurvyLines.png'
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 import { useGetUserQuery,useKeepMeUpdateMutation } from '../../../Store/Slices/authApiSlice';
 import useAuth from '../../../Store/app/useAuth'
 import { useState } from 'react';
@@ -23,6 +32,7 @@ function ProductCTA() {
   const [email2, setEmail2] = useState('');
   const[emailInput,setEmailInput]=useState(email)
  
+<<<<<<< HEAD
  
   const [keepMeUpdate,{ isError, error, isLoading, isSuccess, data }] =useKeepMeUpdateMutation()
   const handleChange = (e) => {
@@ -31,6 +41,19 @@ function ProductCTA() {
   const handleSubmit = () => {
     // כאן אתה יכול להשתמש בערך המצוי במשתנה email ולעשות איתו מה שתרצה
 console.log("rr",email2);
+=======
+
+  //open={open}
+ // closeFunc={handleClose}
+ 
+  const [keepMeUpdate,{ isError, error, isLoading, isSuccess, data }] =useKeepMeUpdateMutation()
+  const handleChange = (event) => {
+    setEmail2(event.target.value);
+  };
+  const handleSubmit = () => {
+    // כאן אתה יכול להשתמש בערך המצוי במשתנה email ולעשות איתו מה שתרצה
+    console.log('Email:', email2);
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     // ניתן לשלוח את הערך לפונקציה שמתעדכנת את המייל
      toRegister(email);
   };
@@ -43,10 +66,14 @@ console.log("rr",email2);
     setOpen(false);
   };
   const toRegister = (e) => {
+<<<<<<< HEAD
     console.log("Id",_id);
     keepMeUpdate({_id,e});
     //  setEmailInput("")
     console.log("emailll",email);
+=======
+    keepMeUpdate({_id,e});
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     
   };
 
@@ -70,7 +97,11 @@ console.log("rr",email2);
                 קבל הצעות במייל
               </Typography>
               <Typography variant="h5">
+<<<<<<< HEAD
                טעם של חג קרוב לבית
+=======
+              לטעום את החגים של היום יום , את החיים בטעם אחר ומרענן
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
               </Typography>
               <TextField
                 noBorder
@@ -111,10 +142,17 @@ console.log("rr",email2);
               background: 'url(/static/themes/onepirate/productCTAImageDots.png)',
             }}
           />
+<<<<<<< HEAD
           {/* <Box
             component="img"
             src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750"
             alt="תת"
+=======
+          <Box
+            component="img"
+            src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750"
+            alt="call to action"
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
             sx={{
               position: 'absolute',
               top: -28,
@@ -124,13 +162,21 @@ console.log("rr",email2);
               width: '100%',
               maxWidth: 600,
             }}
+<<<<<<< HEAD
           /> */}
+=======
+          />
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         </Grid>
       </Grid>
       <Snackbar
         open={open}
         closeFunc={handleClose}
+<<<<<<< HEAD
         message="נרשמת בהצלחה לרשימת הדיוור"
+=======
+        message="אנחנו נשלח לך מייל"
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
       />
       
     </Container>

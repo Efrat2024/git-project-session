@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@lordicon/react": "^1.6.0",
@@ -24,20 +27,29 @@
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.2",
     "jwt-decode": "^4.0.0",
+<<<<<<< HEAD
     "markdown-to-jsx": "^7.4.7",
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     "multer": "^1.4.5-lts.1",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.13",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
     "primereact": "^10.5.1",
+<<<<<<< HEAD
     "quill": "^2.0.2",
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     "react": "^18.2.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-final-form": "^6.5.9",
     "react-hook-form": "^7.50.1",
+<<<<<<< HEAD
     "react-markdown": "^9.0.1",
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.22.1",
     "react-scripts": "5.0.1",

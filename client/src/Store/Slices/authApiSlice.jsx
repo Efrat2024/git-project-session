@@ -10,15 +10,22 @@ const authApiSlice = apiSlice.injectEndpoints({
                 method: "POST",
                 body: e
             }),
+<<<<<<< HEAD
             providesTags:["Vacation1"]
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         }),
     
         refresh: build.mutation({
             query: () => ({
                 url: "/api/auth/login",
                 method: "GET"
+<<<<<<< HEAD
             }),
             providesTags:["Vacation1"]
+=======
+            })
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         }),
 
         register: build.mutation({
@@ -26,8 +33,12 @@ const authApiSlice = apiSlice.injectEndpoints({
             url: "/api/auth/register",
             method: "POST",
             body: registerUser
+<<<<<<< HEAD
             }),
             providesTags:["Vacation1"]
+=======
+            })
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
             }),
         getUser: build.query({
             query: () => ({
@@ -43,6 +54,7 @@ const authApiSlice = apiSlice.injectEndpoints({
                 method: "PUT",
                 body:e
             }),
+<<<<<<< HEAD
             providesTags:["Vacation1"]
         }),
         AddQuestionToTamar: build.mutation({
@@ -52,19 +64,35 @@ const authApiSlice = apiSlice.injectEndpoints({
                 body:e
             }),
             providesTags:["Vacation1"]
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         }),
         getAllRegisters: build.query({
             query: () => ({
                 url: "/api/user/allRegisters",
                 method: "PUT"
             }),
+<<<<<<< HEAD
             providesTags:["Vacation1"]
+=======
+        }),
+        sendEmailTamar: build.mutation({
+            query: (e) => ({
+                url: "/api/user/sendEmailTamar",
+                method: "POST",
+                body:e
+            }),
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         }),
     }),
 });
 
 // Destructure the generated hooks from authApiSlice
+<<<<<<< HEAD
 export const {useRegisterMutation,useLoginMutation, useRefreshMutation ,useGetUserQuery,useKeepMeUpdateMutation,useGetAllRegistersQuery,useAddQuestionToTamarMutation} = authApiSlice
+=======
+export const {useRegisterMutation,useLoginMutation, useRefreshMutation ,useGetUserQuery,useKeepMeUpdateMutation,useGetAllRegistersQuery,useSendEmailTamarMutation} = authApiSlice
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 
 // const authApiSlice = apiSlice.injectEndpoints({
 //     endpoints: (build) => ({

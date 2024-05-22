@@ -5,7 +5,10 @@ const verifyJWT = (req, res, next) => {
         return res.status(401).json({ message: 'Unauthorized' })
     }
     const token = authHeader.split(' ')[1]
+<<<<<<< HEAD
     
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
     jwt.verify(
         token,
         process.env.ACCESS_TOKEN_SECRET,

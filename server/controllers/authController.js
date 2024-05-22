@@ -65,6 +65,10 @@ const register = async (req, res) => {
     else if (user) {
         console.log("i create,,,,");
         const accessToken = jwt.sign(userObject, process.env.ACCESS_TOKEN_SECRET)
+<<<<<<< HEAD
+=======
+        // res.json({ accessToken, role: "User" })
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
         res.status(201).json({ message: `New user ${user.firstname}  ${user.lastname}  created`, status: 2, accessToken })
     }
     else {

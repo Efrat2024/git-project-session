@@ -4,8 +4,13 @@ import { styled } from '@mui/material/styles';
 
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+<<<<<<< HEAD
 import img2 from '../../../images/productHeroArrowDown.png'
 import img from '../../../images/productHeroWonder.png'
+=======
+import img2 from '../../modules/views/images/productHeroArrowDown.png'
+import img from '../../modules/views/images/productHeroWonder.png'
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
 const pointimg =img
 const chetzimg=img2
 

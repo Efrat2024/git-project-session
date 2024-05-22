@@ -15,8 +15,11 @@ const vacationApiSlice = apiSlice.injectEndpoints({
         method: 'PUT',
         body: { userId, vacationId }
       }),
+<<<<<<< HEAD
       providesTags:["Vacation1"],
       providesTags:["Vacation"],
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
       invalidatesTags: ["Vacation"],
       invalidatesTags: ["Vacation1"]
 
@@ -27,8 +30,11 @@ const vacationApiSlice = apiSlice.injectEndpoints({
         method: "PUT",
         body: { userId, vacationId }
       }),
+<<<<<<< HEAD
       providesTags:["Vacation1"],
       providesTags:["Vacation"],
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
       invalidatesTags: ["Vacation"],
       invalidatesTags: ["Vacation1"]
     }),
@@ -39,8 +45,11 @@ const vacationApiSlice = apiSlice.injectEndpoints({
         method: 'PUT',
         body: { userId }
       }),
+<<<<<<< HEAD
       providesTags:["Vacation1"],
       providesTags:["Vacation"],
+=======
+>>>>>>> f952b2e39d1c9915c5b26dd8e5d6069271e73278
       invalidatesTags: ["Vacation"],
       invalidatesTags: ["Vacation1"]
 
